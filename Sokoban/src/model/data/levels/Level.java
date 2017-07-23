@@ -9,6 +9,13 @@ import model.data.objects.Player;
 import model.data.objects.Target;
 import model.data.objects.square;
 
+/**
+ * This class implements a Sokoban level logic
+ * @author Ayal Weinberger
+ *
+ */
+
+
 public class Level implements Serializable {
 	private static final long serialVersionUID = 1L;
 private String name;
@@ -19,12 +26,18 @@ private square player;
 private int numoftargets=0;
 private ArrayList<ArrayList<square>> board;
 
+
+/**
+ * Construct a new level given a specific board
+ * @param board board
+ */
 public Level(ArrayList<ArrayList<square>> board)
 
 {
 	this.board=board;
 	
 	//Finds the square where the player is located
+	
 	for (int i=0;i<board.size();i++)
 	{
 		for (int j=0;j<board.get(i).size();j++)
@@ -42,6 +55,11 @@ public Level(ArrayList<ArrayList<square>> board)
 	}
 }
 
+
+/**
+ * checks if level has been completed
+ * @return - boolean
+ */
 public boolean checkIfComplete()
 {
 	if(numoftargets==BoxesOnTargetCount)
@@ -54,6 +72,11 @@ public boolean checkIfComplete()
 	}
 }
 
+
+/**
+ * returns the number of targets in this level
+ * @return - int
+ */
 public int getNumoftargets() {
 	return numoftargets;
 }
@@ -63,6 +86,8 @@ public void setNumoftargets(int numoftargets) {
 }
 
 //Finds the square where the player is located
+
+
 public void findPlayer()
 {
 	for (int i=0;i<board.size();i++)
@@ -79,6 +104,12 @@ public void findPlayer()
 
 
 //will swap the objects between 2 given squares.
+
+	/**
+	 * swaps objects between two given squares on the board
+	 * @param sq1 - first square
+	 * @param sq2 -second square
+	 */
 	public void swap(square sq1,square sq2)
 	{
 		
@@ -90,23 +121,42 @@ public void findPlayer()
 		sq1.setObject(sq2object);
 	}
 	
+/**
+ * @return - the square where the player is positioned
+ */
 public square getPlayer() {
 	return player;
 }
 
+
+/**
+ * 
+ * @param player - the desired square to position the player
+ */
 public void setPlayer(square player) {
 	this.player = player;
 }
 
+/**
+ * Default constructor 
+ */
 public Level() {
 
 }
 
+/**
+ * 
+ * @return - this level's board
+ */
 public ArrayList<ArrayList<square>> getboard() {
 	return board;
 }
 
 
+/**
+ * 
+ * @param board - new board
+ */
 public void setGameobjects(ArrayList<ArrayList<square>> board) {
 	this.board =board;
 }
@@ -123,21 +173,42 @@ for(int i = 0; i < board.size(); i++){
     return result;
 }
 
+/**
+ * @return Srting level name
+ */
 public String getName() {
 	return name;
 }
+
+/**
+ * @param name - Stnig name
+ */
 public void setName(String name) {
 	this.name = name;
 }
+
+/**
+ * @return int 
+ */
 public int getMovesCount() {
 	return MovesCount;
 }
+/**
+ * @param movesCount int
+ */
 public void setMovesCount(int movesCount) {
 	MovesCount = movesCount;
 }
+
+/**
+ * returns the number of target where boxes are positioned at
+ * @return int
+ */
 public int getBoxesOnTargetCount() {
 	return BoxesOnTargetCount;
 }
+
+
 public void setBoxesOnTargetCount(int boxesOnTargetCount) {
 	BoxesOnTargetCount = boxesOnTargetCount;
 }

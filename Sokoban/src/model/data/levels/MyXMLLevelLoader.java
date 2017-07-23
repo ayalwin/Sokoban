@@ -4,6 +4,11 @@ import java.beans.XMLDecoder;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Loading a new level from a XML file.
+ * @author Ayal Weinberger
+ *
+ */
 public class MyXMLLevelLoader implements LevelLoader {
 
 	@Override

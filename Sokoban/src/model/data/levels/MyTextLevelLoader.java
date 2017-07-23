@@ -13,6 +13,11 @@ import model.data.objects.Target;
 import model.data.objects.Wall;
 import model.data.objects.square;
 
+/**
+ * Loading a new level from a text file.
+ * @author Ayal Weinberger
+ *
+ */
 public class MyTextLevelLoader implements LevelLoader {
 
 	@Override

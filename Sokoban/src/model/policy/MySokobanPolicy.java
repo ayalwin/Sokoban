@@ -7,6 +7,11 @@ import model.data.objects.Target;
 import model.data.objects.Wall;
 import model.data.objects.square;
 
+/**
+ * Implements the Sokoban game Policy
+ * @author Ayal Weinberger
+ *
+ */
 public class MySokobanPolicy implements Policy {
 	Level level;
 	square wall= new square(new Wall(), new Position());

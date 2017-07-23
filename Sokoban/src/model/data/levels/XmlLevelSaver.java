@@ -4,7 +4,12 @@ import java.beans.XMLEncoder;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
+/**
+ * Saves a level as a XML file.
+ * @author Ayal Weinberger
+ * 
+ *
+ */
 public class XmlLevelSaver implements SaveLevel {
 	
 

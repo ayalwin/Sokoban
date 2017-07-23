@@ -9,11 +9,7 @@ import controller.SokobanController;
 import model.MyModel;
 import view.SokoCLI;
 
-/**
- * 
- * @author Uri Grinberg & Ayal Weinberger
- *
- */
+
 public class Run {
 	
 

@@ -6,11 +6,11 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import model.data.objects.square;
-/*
- * <p>
- * The class 
- * <br>
- * 
+/**
+ * Saves a level as a text file
+ * @author Ayal Weinberger
+ * .
+ *
  */
 public class TextLevelSaver implements SaveLevel {
 

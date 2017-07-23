@@ -4,6 +4,12 @@ import java.io.IOException;
 
 import Util.SerializationUtil;
 
+/**
+ * Saves a level as an object file.
+ * @author Ayal Weinberger
+ * 
+ *
+ */
 public class ObjLevelSaver implements SaveLevel {
 
 	@Override
